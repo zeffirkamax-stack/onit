@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div>
+    <h1 class="home-title">GlobalTrans</h1>
+    <p class="home-subtitle">Employee management system</p>
+
+    <div class="nav-cards">
+        <a class="nav-card" asp-controller="Employees" asp-action="Index">
+            Employees
+            <span class="nav-card-arrow">&#8594;</span>
+        </a>
+        <a class="nav-card" asp-controller="PhoneNumbers" asp-action="Index">
+            Contacts
+            <span class="nav-card-arrow">&#8594;</span>
+        </a>
+        <a class="nav-card" asp-controller="Professions" asp-action="Index">
+            Professions
+            <span class="nav-card-arrow">&#8594;</span>
+        </a>
+        <a class="nav-card" asp-controller="Emp_Prof" asp-action="Index">
+            Posts
+            <span class="nav-card-arrow">&#8594;</span>
+        </a>
+    </div>
+</div>

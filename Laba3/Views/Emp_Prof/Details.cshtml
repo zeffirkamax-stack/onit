@@ -1,0 +1,31 @@
+@model Laba3.Models.Emp_Prof
+
+@{
+    ViewData["Title"] = "Post Details";
+}
+
+<h1>Post Details</h1>
+
+<div class="info-block">
+    <div class="info-row">
+        <span class="info-label">Employee</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Employee.Name)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Employee ID</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Employee.Id)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Profession</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Profession.Name)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Profession ID</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Profession.Id)</span>
+    </div>
+</div>
+
+<div class="action-links">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    <a asp-action="Index">Back to list</a>
+</div>

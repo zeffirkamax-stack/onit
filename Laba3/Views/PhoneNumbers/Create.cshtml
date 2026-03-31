@@ -1,0 +1,29 @@
+@model Laba3.Models.PhoneNumber
+
+@{
+    ViewData["Title"] = "New Contact";
+}
+
+<h1>New Contact</h1>
+
+<div class="page-card" style="max-width: 480px;">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label class="control-label">Phone Number</label>
+            <input asp-for="Number" class="form-control" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Employee</label>
+            <select asp-for="EmployeeID" class="form-control" asp-items="ViewBag.EmployeeID"></select>
+        </div>
+        <input type="submit" value="Create" />
+    </form>
+</div>
+
+<a class="back-link" asp-action="Index">&#8592; Back to list</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

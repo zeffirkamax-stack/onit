@@ -1,0 +1,31 @@
+@model Laba3.Models.PhoneNumber
+
+@{
+    ViewData["Title"] = "Delete Contact";
+}
+
+<h1>Delete Contact</h1>
+
+<div class="info-block">
+    <div class="info-row">
+        <span class="info-label">Phone Number</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Number)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Employee ID</span>
+        <span class="info-value">@Html.DisplayFor(model => model.EmployeeID)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Employee</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Employee.Name)</span>
+    </div>
+</div>
+
+<p class="delete-warning">Are you sure you want to delete this record?</p>
+
+<form asp-action="Delete" style="display: inline;">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn-danger" />
+</form>
+&nbsp;
+<a asp-action="Index">Cancel</a>

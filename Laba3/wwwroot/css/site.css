@@ -1,0 +1,382 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 1.5rem 0;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #111;
+    margin: 1rem 0;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 0 0 1.5rem 0;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: #fff !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding: 0.75rem 0;
+    box-shadow: none !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111 !important;
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #111 !important;
+}
+
+/* --- Layout container --- */
+.container {
+    max-width: 900px;
+    padding: 2rem 1.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    border-top: 1px solid #e5e5e5 !important;
+    padding: 1rem 0;
+    font-size: 0.85rem;
+    color: #999;
+    background: #fff;
+    position: relative !important;
+    margin-top: 3rem;
+}
+
+.footer a {
+    color: #999;
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-action {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+}
+
+.btn-primary:hover, .btn-action:hover {
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-danger {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+    color: #fff;
+}
+
+/* Generic submit/input buttons */
+input[type="submit"] {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-top: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background: #333;
+}
+
+input[type="submit"].btn-danger {
+    background: #dc2626;
+}
+
+input[type="submit"].btn-danger:hover {
+    background: #b91c1c;
+}
+
+/* --- Form controls --- */
+.form-control, .form-group input, .form-group select {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+    background: #fff;
+    color: #111;
+    transition: border-color 0.15s;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label, .control-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 0.35rem;
+}
+
+.text-danger {
+    color: #dc2626 !important;
+    font-size: 0.8rem;
+}
+
+/* --- Tables --- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #111;
+    font-size: 0.9rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.table thead tr {
+    border-bottom: 2px solid #e5e5e5;
+    background: #fafafa;
+}
+
+.table th {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    text-align: left;
+}
+
+.table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #111;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background: #fafafa;
+}
+
+.table td a {
+    color: #2563eb;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+.table td a:hover {
+    text-decoration: underline;
+}
+
+/* --- Page wrapper for content --- */
+.page-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Home page --- */
+.home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 520px;
+}
+
+.nav-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.25rem;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #111;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+}
+
+.nav-card:hover {
+    border-color: #bbb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    color: #111;
+    text-decoration: none;
+}
+
+.nav-card-arrow {
+    color: #bbb;
+    font-size: 1rem;
+}
+
+/* --- Details/Delete info block --- */
+.info-block {
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 480px;
+}
+
+.info-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #666;
+    min-width: 120px;
+}
+
+.info-value {
+    color: #111;
+}
+
+/* --- Action links row --- */
+.action-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.action-links a {
+    color: #2563eb;
+}
+
+/* --- Back link --- */
+.back-link {
+    display: inline-block;
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.back-link:hover {
+    color: #111;
+}
+
+/* --- Confirm delete warning --- */
+.delete-warning {
+    font-size: 0.95rem;
+    color: #dc2626;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .nav-cards {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 1.25rem 1rem;
+    }
+}

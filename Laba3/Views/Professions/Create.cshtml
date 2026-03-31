@@ -1,0 +1,25 @@
+@model Laba3.Models.Profession
+
+@{
+    ViewData["Title"] = "New Profession";
+}
+
+<h1>New Profession</h1>
+
+<div class="page-card" style="max-width: 480px;">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Create" />
+    </form>
+</div>
+
+<a class="back-link" asp-action="Index">&#8592; Back to list</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,13 @@
+{
+  "name": "lab4-node-demo",
+  "version": "1.0.0",
+  "description": "Демонстрация балансировки нагрузки Nginx (round-robin) по контейнерам Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+

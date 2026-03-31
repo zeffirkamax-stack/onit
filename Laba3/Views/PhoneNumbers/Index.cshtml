@@ -1,0 +1,36 @@
+@model IEnumerable<Laba3.Models.PhoneNumber>
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<h1>Contacts</h1>
+
+<p>
+    <a class="btn-action" asp-action="Create">+ Add contact</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Employee ID</th>
+            <th>Phone Number</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Employee.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.EmployeeID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Number)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

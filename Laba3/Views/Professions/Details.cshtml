@@ -1,0 +1,23 @@
+@model Laba3.Models.Profession
+
+@{
+    ViewData["Title"] = "Profession Details";
+}
+
+<h1>Profession Details</h1>
+
+<div class="info-block">
+    <div class="info-row">
+        <span class="info-label">@Html.DisplayNameFor(model => model.Id)</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Id)</span>
+    </div>
+    <div class="info-row">
+        <span class="info-label">@Html.DisplayNameFor(model => model.Name)</span>
+        <span class="info-value">@Html.DisplayFor(model => model.Name)</span>
+    </div>
+</div>
+
+<div class="action-links">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    <a asp-action="Index">Back to list</a>
+</div>
