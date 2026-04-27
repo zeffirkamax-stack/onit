@@ -19,8 +19,10 @@ public class HomePageTests : IClassFixture<CustomWebApplicationFactory>
 		var client = _factory.CreateClient();
 
 		var response = await client.GetAsync("/");
-
+		
 		Assert.Equal(HttpStatusCode.Found, response.StatusCode);
+
+	 
 	}
 }
 
